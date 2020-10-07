@@ -1,0 +1,88 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block title %}
+TJ Simonson | Blog
+{% endblock %}
+
+{% block style %}
+    <style>
+    .container {
+        margin-top: 2em;
+        width: 80%;
+    }
+    .card__sub {
+        border: black;
+    }
+    .card__sub:hover{
+        box-shadow: 1px 2px 2px 1px black;
+        transform: translate(-1px);
+        transition: all .3s ease-in;
+    }
+    .btn:hover {
+        opacity:1;
+        transition: all .2s ease-in-out;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+     <section class="about" id="myHeaderZ">
+        <div class="back-z">
+
+            <header class="header">
+
+                <div class="header__logo-box">
+                                    <img src="{% static 'myapp/img/_Logo.png' %}" alt="Logo" class="header__logo">
+
+                </div>
+
+                <div class="header__text-box">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main">Tim Simonson</span>
+                        <span class="heading-primary--sub" id="mySub">Welcome to my Blog</span>
+                    </h1>
+                    <div class="group-buttons">
+                        <a href="{% url 'index' %}" class="btn btn--white btn--animated" style="background-color: #4c699f; color: white; opacity: 0.8; font-size: 18px">Return Home</a>
+                    </div>
+                    <h1 id="hello">Web Developer</h1>
+                </div>
+            </header>
+
+        </div>
+
+    </section>
+
+<div class="container">
+
+        <!-- Blog Entries Column -->
+    <div class="container col-md-8 card mb-4  mt-3 left  top">
+            {% for post in post_list %}
+            <div class="card card__sub">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary" style="display: inline;">View Post &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+</div>
+    {% if is_paginated %}
+  <nav aria-label="Page navigation container"></nav>
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+    {% endif %}
+  </ul>
+  </nav>
+</div>
+{% endif %}
+{% endblock %}
