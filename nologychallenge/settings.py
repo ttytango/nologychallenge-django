@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '0m@@%o66lj02+&1y&f5-h-150iv*^wlo-2da1sz6^14^@3#s50'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -123,3 +123,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = str(BASE_DIR / "static/")
+# STATICFILES_DIRS = [
+#     str(BASE_DIR / "static/"),
+# ]

@@ -14,15 +14,38 @@ TJ Simonson | Blog
     .card__sub {
         border: black;
     }
+    .card:not(.card__sub) {
+        background-color: #b9bacd;
+        {#opacity: 0.3;#}
+        border-style: none;
+    }
     .card__sub:hover{
         box-shadow: 1px 2px 2px 1px black;
         transform: translate(-1px);
-        transition: all .3s ease-in;
+        transition: all .2s ease-in;
     }
     .btn:hover {
         opacity:1;
         transition: all .2s ease-in-out;
     }
+    .page-link {
+        color: #053f05;
+        border-radius: 4px;
+        font-size: larger;
+        padding: 1em 0.8em;
+        background: linear-gradient(to right, rgba(204, 186, 211, 0.8) 90%, rgba(160, 100, 104, 0.7) 80%);
+        border-style: none;
+        box-shadow: inset 1px 1px 1px black;
+    }
+    .page-link:hover {
+        box-shadow: -1px -1px 5px black;
+        transition: all .2s ease-out;
+    }
+    .page-link:active{
+        box-shadow: inset 1px 1px 3px black;
+        transition: all .2s ease-out;
+    }
+
     </style>
 {% endblock %}
 
@@ -34,8 +57,7 @@ TJ Simonson | Blog
             <header class="header">
 
                 <div class="header__logo-box">
-                                    <img src="{% static 'myapp/img/_Logo.png' %}" alt="Logo" class="header__logo">
-
+                    <img src="{% static 'myapp/img/_Logo.png' %}" alt="Logo" class="header__logo">
                 </div>
 
                 <div class="header__text-box">
