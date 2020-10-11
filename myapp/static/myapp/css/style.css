@@ -729,6 +729,21 @@ body {
     -ms-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
 }
+/*.card--1 {*/
+/*    animation: fa-spin .6s alternate-reverse 2 cubic-bezier(1, 0.74, .2, 1);*/
+/*    -webkit-animation: fa-spin .6s alternate-reverse 2 cubic-bezier(1, 0.74, .2, 1);*/
+/*    !*-webkit-animation-play-state: paused;*!*/
+/*    !*animation-play-state: paused;*!*/
+/*    !*-webkit-animation-fill-mode: both;*!*/
+/*    !*animation-fill-mode: both;*!*/
+/*}*/
+
+/*.card--1 svg {*/
+/*    animation: sassyAnimate 10s normal infinite, fa-spin 2s 1 reverse cubic-bezier(0.7, 0.5, 0.33, 0.5);*/
+/*    -webkit-animation: sassyAnimate 10s normal infinite, fa-spin 2s 1 reverse cubic-bezier(0.7, 0.5, 0.33, 0.5);*/
+/*    -webkit-animation-duration: 2s;*/
+/*    animation-duration: 2s;*/
+/*}*/
 
 /*.card svg {*/
 /*    animation: fa-spin 0.6s alternate-reverse 2 cubic-bezier(1, 0.74, 0.2, 1);*/
@@ -758,17 +773,6 @@ body {
 /*    -webkit-filter: drop-shadow(1px 2px 2px black);*/
 /*}*/
 
-/*.card--3 svg {*/
-/*    animation: sassyAnimate 3s normal infinite ease-in-out, fa-spin 1.5s 1 reverse cubic-bezier(0.7, 0.15, 0.35, 0.6);*/
-/*    -webkit-animation: sassyAnimate 3s normal infinite ease-in-out, fa-spin 1.5s 1 reverse cubic-bezier(0.7, 0.15, 0.35, 0.6);*/
-/*    transition: all .5s ease-out;*/
-/*    -webkit-transition: all .5s ease-out;*/
-/*    -moz-transition: all .5s ease-out;*/
-/*    -ms-transition: all .5s ease-out;*/
-/*    -o-transition: all .5s ease-out;*/
-/*    filter: drop-shadow(1px 2px 2px black);*/
-/*    -webkit-filter: drop-shadow(1px 2px 4px black);*/
-/*}*/
 .card--3 svg {
     animation: sassyAnimate 10s normal infinite, fa-spin 2s 1 normal cubic-bezier(0.7, 0.5, 0.33, 0.5);
     -webkit-animation: sassyAnimate 10s normal infinite, fa-spin 2s 1 normal cubic-bezier(0.7, 0.5, 0.33, 0.5);
@@ -777,7 +781,7 @@ body {
     animation-play-state: paused;
 }
 
-.card .animate {
+.animate {
     -webkit-animation-play-state: running;
     animation-play-state: running;
 }
@@ -796,6 +800,8 @@ body {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
+
+
 
 .featured {
     margin-top: 2rem;
@@ -861,6 +867,10 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 }
+/*.card-text {*/
+/*    !*padding: 20rem;*!*/
+/*}*/
+
 
 @media (max-width: 600px) {
     .featured .cards {
@@ -902,13 +912,13 @@ body {
     -o-transition: all .2s ease-in-out;
 }
 
-.about .back-z {
-    background: linear-gradient(#70d8cf 20%, black 70%);
-    position: relative;
-    height: 75vh;
-    z-index: 20;
-    box-shadow: 1px 2px 2px 3px #2c244d;
-}
+/*.about .back-z {*/
+/*    background: linear-gradient(#70d8cf 20%, black 70%);*/
+/*    position: relative;*/
+/*    height: 75vh;*/
+/*    z-index: 20;*/
+/*    box-shadow: 1px 2px 2px 3px #2c244d;*/
+/*}*/
 
 .contact {
     background: #313757;

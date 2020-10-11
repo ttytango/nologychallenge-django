@@ -14,6 +14,63 @@ Contact Me
     animation-direction: normal;
     animation-duration: 1s;
 }
+{#input {#}
+{#    width: 25em;#}
+{#}#}
+html {
+    font-size: 1rem;
+}
+
+@media (max-width: 620px) {
+    #contactMe {
+    width: 175%;
+        margin: 0 20px;
+    }
+    html {
+        font-size: 15px;
+    }
+}
+@media (max-width: 750px) {
+
+    .sub-header {
+        font-size: 11px;
+    }
+    input {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    .sub-header {
+        font-size: 14px;
+    }
+}
+
+    @media (max-width: 600px) {
+        input {
+            width: 85%;
+        }
+    }
+    fieldset {
+        font-size: 26px;
+    }
+}
+
+#text {
+    margin-bottom: 10px;
+}
+#id_message {
+    background: linear-gradient(to bottom, rgba(250,250,240, 1) 70%, rgba(240,240,224, 1) 95%);
+    width: 90%;
+}
+
+@media (max-width: 600px) {
+    #id_message {
+        width: 85%;
+    }
+}
+
+
+}
 </style>
 {% endblock %}
 {% block content %}
@@ -25,9 +82,8 @@ Contact Me
            <form id="contactForm" method="post">
     {% csrf_token %}
     {% for field in form %}
-        <fieldset style="font-size: 16px;">{{ field.label }}:
-            <br>
-                {{ field }}
+        <fieldset style="margin-bottom: 0.25rem;">{{ field.label }}:</fieldset>
+        <p style="margin-bottom: 20px">{{ field }}</p>
         </fieldset>
     {% endfor %}
 
@@ -60,8 +116,9 @@ Contact Me
 
     </div>
 </form>
-          <button style="margin: 1em 0.6em; border-radius: 4px;"><a href="{% url 'index' %}" class="btn btn-warning">Return Home</a>
-</button>
+     <div class="container">
+          <button style="margin: 1.5rem 0.6em; border-radius: 8px;"><a href="{% url 'index' %}" class="btn btn-warning">Return Home</a>
+</button>></div>
     </section>
 
 {% endblock %}
