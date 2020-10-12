@@ -14,23 +14,20 @@ Initialise a Python virtual environment
 To do this, on Windows:
 
 `> mkdir <DIRECTORY-NAME>`
-
-`> virtualenv .`
-
-`> ./Scripts/activate`
-
-
-Now that you have virtualenv running:
-
-,
 `> cd <DIRECTORY-NAME>`
 
 
 Clone the repo into this folder
+`> py -m venv env`
+
+`> .\env\Scripts\activate`
+
+
+
 
 ----------
 
-Once cloned and still in your python virtualenv install the requirements using:
+Whilst in the virtual environment install the requirements using:
 
 
 `> pip install -r requirements.txt`
