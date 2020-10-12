@@ -2,7 +2,6 @@
 
 ﻿# Django-Portfolio website for Nology pre-course challenge
 
-This is the first commit to yottabyte-devs
 
 This project has been made using the Django=3.1 framework
 Please make sure you have Python 3.8.2 installed locally on your system before proceeding 
